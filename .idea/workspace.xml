@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="559b2830-3d5f-41d8-9ab2-4758a51b2129" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gitlab/nadiatrf/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gitlab/nadiatrf/models/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gitlab/nadiatrf/models/ContractAmount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gitlab/nadiatrf/models/Risk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ContractAmountTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ContractTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestSuite.java" afterDir="false" />
+    <list default="true" id="559b2830-3d5f-41d8-9ab2-4758a51b2129" name="Changes" comment="#1 https://gitlab.com/consist-study/2022_10_back/vlg_trofimova_nadia">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/консист/lab_1&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
 }</component>
@@ -123,8 +113,17 @@
       <workItem from="1668089032297" duration="54000" />
       <workItem from="1668089103281" duration="329000" />
       <workItem from="1668089450760" duration="154000" />
-      <workItem from="1668089617864" duration="21719000" />
+      <workItem from="1668089617864" duration="22812000" />
+      <workItem from="1668151805496" duration="329000" />
     </task>
+    <task id="LOCAL-00001" summary="#1 https://gitlab.com/consist-study/2022_10_back/vlg_trofimova_nadia">
+      <created>1668113061958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668113061958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +139,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="#1 https://gitlab.com/consist-study/2022_10_back/vlg_trofimova_nadia" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1 https://gitlab.com/consist-study/2022_10_back/vlg_trofimova_nadia" />
   </component>
 </project>
