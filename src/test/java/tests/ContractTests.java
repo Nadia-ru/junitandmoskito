@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -34,6 +35,7 @@ public class ContractTests {
                 {new Contract("n%m", Arrays.asList(100, 10, 10))},
                 {new Contract("n-5m/c", Arrays.asList(100, 10))},
                 {new Contract("n-m+34.0", Arrays.asList(100, 10))},
+                {new Contract("n-n+34.0", Arrays.asList(100, 10))},
         });
     }
 
@@ -51,6 +53,7 @@ public class ContractTests {
         System.out.println("options: " + contract.getOptions());
     }
 
+    //проверка на некоректные операции
     @Test
     public void invalidOperations() {
         Pattern pattern = Pattern.compile("(%|//|<|>|=)+");
@@ -59,16 +62,17 @@ public class ContractTests {
         assertFalse("invalid operation in formula", isInvalid);
     }
 
+    //проверка на соотвтетсвующее колличество параметров в формуле
     @Test
     public void missingParameters() {
         int countParameters = contract.getOptions().size();
         Pattern pattern = Pattern.compile("[a-z]+");
         Matcher matcher = pattern.matcher(contract.getFormula());
-        int countParamInFormula = 0;
+        HashSet<String> parameters = new HashSet<String>();
         while(matcher.find())
-            countParamInFormula++;
+            parameters.add(matcher.group());
         Boolean isInvalid = false;
-
+        int countParamInFormula = parameters.size();
         String err="extra parameters in the formula";
         if(countParameters>countParamInFormula) {
             isInvalid = true;
@@ -81,6 +85,7 @@ public class ContractTests {
 
     @Test
     public void correctOdds(){
+        // шаблон для проверки неккоректных величин коээффициентов в формуле (просто чисел или неверных дробей)
         Pattern pattern = Pattern.compile("([+-]?((\\d+\\.{1}\\d*)|(\\.\\d+)))|(^[\\W\\sa-zA-Z_-]+$)");
         Matcher matcher = pattern.matcher(contract.getFormula());
         Boolean isInvalid = matcher.find();

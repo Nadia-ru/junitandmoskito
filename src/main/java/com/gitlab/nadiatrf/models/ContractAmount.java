@@ -19,17 +19,12 @@ public class ContractAmount {
         return riskList;
     }
 
-    public void setRiskList(List<String> riskList) {
-        this.riskList = riskList;
-    }
 
     public Integer getAmount() {
         return amount;
     }
 
-    public void setAmount(Integer amount) {
-        this.amount = amount;
-    }
+
 
     public List<Risk> getRisks() {
         return risks;
