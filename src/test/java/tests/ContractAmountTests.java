@@ -20,10 +20,11 @@ import static org.junit.Assert.assertEquals;
 
 public class ContractAmountTests {
 
+    // РїСЂРѕРІРµСЂСЏРµС‚ СЂР°РІРЅРѕРјРµСЂРЅРѕ Р»Рё СЂР°СЃРїСЂРµРґРµР»РёР»РёР»СЃСЊ СЂРёСЃРєРё РїРѕ РѕР±С‰РµР№ СЃСѓРјРјРµ СЃС‚СЂР°С…РѕРІРєРё
     @Test
     public void testUseSum(){
-        ContractAmount contractAmount = new ContractAmount(16000, Arrays.asList("от кражи", "от смерти в результате болезни", "от болезни(восполнить расходы на лечение)", "от смерти в результате несчастного случая"));
-        assertEquals("risks fit the distribution",
+        ContractAmount contractAmount = new ContractAmount(16000, Arrays.asList("РѕС‚ РєСЂР°Р¶Рё", "РѕС‚ СЃРјРµСЂС‚Рё РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±РѕР»РµР·РЅРё", "РѕС‚ Р±РѕР»РµР·РЅРё(РІРѕСЃРїРѕР»РЅРёС‚СЊ СЂР°СЃС…РѕРґС‹ РЅР° Р»РµС‡РµРЅРёРµ)", "РѕС‚ СЃРјРµСЂС‚Рё РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РЅРµСЃС‡Р°СЃС‚РЅРѕРіРѕ СЃР»СѓС‡Р°СЏ"));
+        assertEquals("the risks do not match the distribution",
                 Arrays.asList(new Risk(4000),new Risk(4000),new Risk(4000),new Risk(4000)),
                 contractAmount.getRisks());
     }

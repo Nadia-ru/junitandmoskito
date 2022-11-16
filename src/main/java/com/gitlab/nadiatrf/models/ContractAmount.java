@@ -36,13 +36,6 @@ public class ContractAmount {
     }
 
     public void useSum(Integer newSum, List<String> risks) {
-        this.risks = new ArrayList<>();
-        int countRisks =risks.size();
-        Integer sumForRisk = newSum/countRisks;
-        for(int i=0;i<countRisks;i++){
-            Risk risk = new Risk();
-            risk.setAmountOfRisk(sumForRisk);
-            this.risks.add(risk);
-        }
+
     }
 }
