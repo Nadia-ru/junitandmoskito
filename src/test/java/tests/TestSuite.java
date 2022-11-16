@@ -8,8 +8,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses(
-        { ContractTests.class,
-        ContractAmountTests.class}
+        { ContractTests.class}
 )
 public class TestSuite {
 

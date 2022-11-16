@@ -1,19 +1,14 @@
 package tests;
 
 import com.gitlab.nadiatrf.models.Contract;
-import com.sun.deploy.util.StringUtils;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Ignore;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -40,12 +35,6 @@ public class ContractTests {
     }
 
 
-    @Test
-    @Ignore
-    public void createContract() {
-        Contract contract = Mockito.mock(Contract.class);
-        assertEquals(null, contract.getFormula());
-    }
 
     @Test
     public void testChecked() {
