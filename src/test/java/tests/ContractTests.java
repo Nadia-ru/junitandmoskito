@@ -38,15 +38,15 @@ public class ContractTests {
 
     @Test
     public void testChecked() {
-        System.out.println("formula: " + contract.getFormula());
-        System.out.println("options: " + contract.getOptions());
+        System.out.println("formula: " + contract.formula);
+        System.out.println("options: " + contract.options);
     }
 
     //проверка на некоректные операции
     @Test
     public void invalidOperations() {
         Pattern pattern = Pattern.compile("(%|//|<|>|=)+");
-        Matcher matcher = pattern.matcher(contract.getFormula());
+        Matcher matcher = pattern.matcher(contract.formula);
         Boolean isInvalid = matcher.find();
         assertFalse("invalid operation in formula", isInvalid);
     }
@@ -54,9 +54,9 @@ public class ContractTests {
     //проверка на соотвтетсвующее колличество параметров в формуле
     @Test
     public void missingParameters() {
-        int countParameters = contract.getOptions().size();
+        int countParameters = contract.options.size();
         Pattern pattern = Pattern.compile("[a-z]+");
-        Matcher matcher = pattern.matcher(contract.getFormula());
+        Matcher matcher = pattern.matcher(contract.formula);
         HashSet<String> parameters = new HashSet<String>();
 
         while(matcher.find())
@@ -78,7 +78,7 @@ public class ContractTests {
     public void correctOdds(){
         // шаблон для проверки неккоректных величин коээффициентов в формуле (просто чисел или неверных дробей)
         Pattern pattern = Pattern.compile("([+-]?((\\d+\\.{1}\\d*)|(\\.\\d+)))|(^[\\W\\sa-zA-Z_-]+$)");
-        Matcher matcher = pattern.matcher(contract.getFormula());
+        Matcher matcher = pattern.matcher(contract.formula);
         Boolean isInvalid = matcher.find();
         assertTrue("incorrect coefficient in the formula", isInvalid);
     }
