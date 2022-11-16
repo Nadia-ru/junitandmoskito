@@ -69,10 +69,12 @@ public class ContractTests {
         Pattern pattern = Pattern.compile("[a-z]+");
         Matcher matcher = pattern.matcher(contract.getFormula());
         HashSet<String> parameters = new HashSet<String>();
+
         while(matcher.find())
             parameters.add(matcher.group());
         Boolean isInvalid = false;
         int countParamInFormula = parameters.size();
+
         String err="extra parameters in the formula";
         if(countParameters>countParamInFormula) {
             isInvalid = true;
