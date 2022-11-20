@@ -3,7 +3,7 @@ package com.gitlab.nadiatrf.models;
 
 import java.util.List;
 
-public class Risk implements IRisk{
+public class Risk implements IRisk {
     public String title;
     public Integer amountOfRisk;
 
@@ -11,7 +11,9 @@ public class Risk implements IRisk{
 
         this.amountOfRisk = amountOfRisk;
     }
-    public Risk() {}
+
+    public Risk() {
+    }
 
     public List<Risk> useSum(Integer newSum) {
         return null;

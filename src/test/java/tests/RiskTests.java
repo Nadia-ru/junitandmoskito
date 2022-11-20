@@ -30,14 +30,14 @@ public class RiskTests {
     }
 
     @Test
-    public void testUseSumWhereSumIsZero(){
+    public void testUseSumWhereSumIsZero() {
         Mockito.doThrow(new RuntimeException()).when(risk).useSum(0);
 
-       risk.useSum(0);
+        risk.useSum(0);
     }
 
     @Test
-    public void testUseSumWhereNegativeSum(){
+    public void testUseSumWhereNegativeSum() {
         Mockito.doThrow(new RuntimeException()).when(risk).useSum(-1);
 
         risk.useSum(-1);
