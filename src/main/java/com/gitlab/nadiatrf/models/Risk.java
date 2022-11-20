@@ -3,18 +3,18 @@ package com.gitlab.nadiatrf.models;
 
 import java.util.List;
 
-public class Risk {
+public class Risk implements IRisk{
     public String title;
     public Integer amountOfRisk;
 
-    public Risk(String title,Integer amountOfRisk) {
-        this.title = title;
+    public Risk(Integer amountOfRisk) {
+
         this.amountOfRisk = amountOfRisk;
     }
     public Risk() {}
 
-    public void useSum(Integer newSum) {
-
+    public List<Risk> useSum(Integer newSum) {
+        return null;
     }
 
 }
