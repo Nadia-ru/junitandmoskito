@@ -1,6 +1,5 @@
 package com.gitlab.nadiatrf.models;
 
-import java.util.Objects;
 
 public class Risk {
     public String title;
