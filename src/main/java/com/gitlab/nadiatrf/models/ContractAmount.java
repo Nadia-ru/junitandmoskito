@@ -12,7 +12,5 @@ public class ContractAmount {
         this.countOfRisk = countOfRisk;
     }
 
-    public void useSum(Integer newSum, List<String> risks) {
 
-    }
 }

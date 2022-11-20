@@ -1,6 +1,8 @@
 package com.gitlab.nadiatrf.models;
 
 
+import java.util.List;
+
 public class Risk {
     public String title;
     public Integer amountOfRisk;
@@ -11,6 +13,8 @@ public class Risk {
     }
     public Risk() {}
 
+    public void useSum(Integer newSum) {
 
+    }
 
 }
