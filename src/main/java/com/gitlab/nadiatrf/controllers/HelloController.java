@@ -1,6 +1,7 @@
 package com.gitlab.nadiatrf.controllers;
 
 
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,6 +10,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String HelloWorld() {
+
         return "Hello World!";
     }
 }
