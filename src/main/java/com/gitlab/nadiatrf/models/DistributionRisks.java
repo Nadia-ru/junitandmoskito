@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DistributionRisks implements  IDistributionRisks{
     @Override
-    public void sendSum(BigDecimal sum, List<Risk> risks) {
+    public void sendSum(BigDecimal sum, List<IRisk> risks) {
 
     }
 }

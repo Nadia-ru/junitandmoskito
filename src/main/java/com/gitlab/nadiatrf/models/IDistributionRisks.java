@@ -7,5 +7,5 @@ import java.util.List;
  * интерфейс распредления рисков
  */
 public interface IDistributionRisks {
-    void sendSum(BigDecimal sum, List<Risk> risks);
+    void sendSum(BigDecimal sum, List<IRisk> risks);
 }
