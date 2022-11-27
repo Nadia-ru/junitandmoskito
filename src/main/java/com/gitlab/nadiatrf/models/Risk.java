@@ -1,13 +1,14 @@
 package com.gitlab.nadiatrf.models;
 
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Risk implements IRisk {
     public String title;
-    public Integer amountOfRisk;
+    public BigDecimal amountOfRisk;
 
-    public Risk(Integer amountOfRisk) {
+    public Risk(BigDecimal amountOfRisk) {
 
         this.amountOfRisk = amountOfRisk;
     }
@@ -15,8 +16,8 @@ public class Risk implements IRisk {
     public Risk() {
     }
 
-    public List<Risk> useSum(Integer newSum) {
-        return null;
+    public void useSum(BigDecimal newSum) {
+
     }
 
 }
