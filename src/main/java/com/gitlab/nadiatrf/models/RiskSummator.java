@@ -6,6 +6,6 @@ import java.util.List;
 /**
  * интерфейс распредления рисков
  */
-public interface IDistributionRisks {
-    void sendSum(BigDecimal sum, List<IRisk> risks);
+public interface RiskSummator {
+    void sendSum(BigDecimal sum, List<RiskCompositor> risks);
 }

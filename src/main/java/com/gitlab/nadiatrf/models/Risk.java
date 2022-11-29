@@ -2,9 +2,8 @@ package com.gitlab.nadiatrf.models;
 
 
 import java.math.BigDecimal;
-import java.util.List;
 
-public class Risk implements IRisk {
+public class Risk implements RiskCompositor {
     public String title;
     public BigDecimal amountOfRisk;
 

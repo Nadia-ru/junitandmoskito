@@ -1,11 +1,10 @@
 package com.gitlab.nadiatrf.models;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * интерфейс риска в договоре
  */
-public interface IRisk {
+public interface RiskCompositor {
     void useSum(BigDecimal newSum);
 }
