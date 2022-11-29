@@ -1,0 +1,35 @@
+@startuml Domain Model
+User o-- Guest
+User  *--  Address
+Product *--  Category
+Basket  o--  Product
+User o-- Basket
+class Guest {
+
+}
+class User {
+#id
+#name
+#address
+#basket
+}
+class Address{
+#id
+#city
+#street
+#house
+}
+class Product{
+#id
+#title
+#photo
+#category
+}
+class Category{
+#title
+}
+class Basket{
+#id
+#products
+}
+@enduml
