@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-.idea/
+
 ### IntelliJ IDEA ###
 *.iws
 *.iml
@@ -33,4 +33,5 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
 
