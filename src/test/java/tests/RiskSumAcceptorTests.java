@@ -30,21 +30,21 @@ public class RiskSumAcceptorTests {
 
         distributionRisks.sendSum(BigDecimal.valueOf(200), Arrays.asList(risk1,risk2));
 
-        verify(risk1,times(1)).useSum(BigDecimal.valueOf(100));
-        verify(risk2,times(1)).useSum(BigDecimal.valueOf(100));
+        verify(risk1,times(1)).useSum(BigDecimal.valueOf(10000,2));
+        verify(risk2,times(1)).useSum(BigDecimal.valueOf(10000,2));
     }
 
 
     @Test
     public void  allSumMatchWithOddNumberParameters(){
-        RiskCompositor risk1 = mock(Risk.class);
-        RiskCompositor risk2 = mock(Risk.class);
-        RiskCompositor risk3 = mock(Risk.class);
+        RiskCompositor risk1 = mock(RiskCompositor.class);
+        RiskCompositor risk2 = mock(RiskCompositor.class);
+        RiskCompositor risk3 = mock(RiskCompositor.class);
 
        distributionRisks.sendSum(BigDecimal.valueOf(100), Arrays.asList(risk1,risk2, risk3));
 
         verify(risk1,times(1)).useSum(BigDecimal.valueOf(33.33));
         verify(risk2,times(1)).useSum(BigDecimal.valueOf(33.33));
-        verify(risk2,times(1)).useSum(BigDecimal.valueOf(33.34));
+        verify(risk3,times(1)).useSum(BigDecimal.valueOf(33.34));
     }
 }

@@ -15,6 +15,9 @@ public class Risk implements RiskCompositor {
     public Risk() {
     }
 
+    public Risk(RiskCompositor risk) {
+    }
+
     public void useSum(BigDecimal newSum) {
 
     }
