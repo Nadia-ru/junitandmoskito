@@ -47,4 +47,22 @@ public class RiskSumAcceptorTests {
         verify(risk2,times(1)).useSum(BigDecimal.valueOf(33.33));
         verify(risk3,times(1)).useSum(BigDecimal.valueOf(33.34));
     }
+
+    // тест на случай если перевес риска больше, чем 1 копейка
+    @Test
+    public void  allSumMatchWithFourParameters(){
+        RiskCompositor risk1 = mock(RiskCompositor.class);
+        RiskCompositor risk2 = mock(RiskCompositor.class);
+        RiskCompositor risk3 = mock(RiskCompositor.class);
+        RiskCompositor risk4 = mock(RiskCompositor.class);
+
+
+        distributionRisks.sendSum(BigDecimal.valueOf(1137.43), Arrays.asList(risk1,risk2, risk3,risk4));
+
+        verify(risk1,times(1)).useSum(BigDecimal.valueOf(284.35));
+        verify(risk2,times(1)).useSum(BigDecimal.valueOf(284.35));
+        verify(risk3,times(1)).useSum(BigDecimal.valueOf(284.35));
+        verify(risk4,times(1)).useSum(BigDecimal.valueOf(284.38));
+
+    }
 }
