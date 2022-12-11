@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 public class RiskSumAcceptor implements RiskSummator {
+
     @Override
     public void sendSum(BigDecimal sum, List<RiskCompositor> risks) {
         double count = risks.size();
@@ -14,6 +15,7 @@ public class RiskSumAcceptor implements RiskSummator {
         BigDecimal divideBy = countRisks.multiply(sub);
         sum = sum.setScale(2);
 
+        // цикл нам нужен ля вычисения остатка на добавление его в последний риск
         while(true) {
             if (sum.remainder(divideBy).compareTo(zero)!=0) {
                 sum = sum.subtract(sub);
@@ -27,7 +29,5 @@ public class RiskSumAcceptor implements RiskSummator {
                 break;
             }
         }
-
-
     }
 }
